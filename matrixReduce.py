@@ -37,11 +37,11 @@ lines.sort()
 for line in lines:
     chars, count = line.split('\t', 1)
     if chars[0] == '_':
-        char0index = 27
+        char0index = -1
     else:
         char0index = allowed_chars.index(chars[0])
     if chars[1] == '_':
-        char1index = 27
+        char1index = -1
     else:
         char1index = allowed_chars.index(chars[1])
     matrix[char0index][char1index] += 1
