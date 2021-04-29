@@ -1,8 +1,8 @@
 import sys
 
-current_word = None
+current_chars = None
 current_count = 0
-word = None
+chars = None
 
 lines = sys.stdin.readlines()
 lines.sort()
@@ -10,19 +10,19 @@ lines.sort()
 for line in lines:
     line = line.strip()
 
-    word, count = line.split('\t', 1)
+    chars, count = line.split('\t', 1)
     count = int(count)
 
-    if current_word == word:
+    if current_chars == chars:
         current_count += count
     else:
-        if current_word:
-            print('%s\t%s' % (current_word, current_count))
+        if current_chars:
+            print('%s\t%s' % (current_chars, current_count))
         current_count = count
-        current_word = word
+        current_chars = chars
 
-if current_word == word:
-    print('%s\t%s' % (current_word, current_count))
+if current_chars == chars:
+    print('%s\t%s' % (current_chars, current_count))
 
 
 """
