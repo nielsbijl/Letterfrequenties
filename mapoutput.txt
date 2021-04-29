@@ -1,0 +1,18 @@
+ra	1
+ab	1
+ba	1
+ar	1
+rb	1
+be	1
+er	1
+r_	1
+_ 	1
+ r	1
+ra	1
+ab	1
+ba	1
+ar	1
+rb	1
+be	1
+er	1
+r_	1
