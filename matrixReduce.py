@@ -36,7 +36,6 @@ lines.sort()
 
 for line in lines:
     chars, count = line.split('\t', 1)
-    print(chars)
     if chars[0] == '_':
         char0index = 27
     else:
@@ -47,4 +46,5 @@ for line in lines:
         char1index = allowed_chars.index(chars[1])
     matrix[char0index][char1index] += 1
 
-print(matrix)
+results = list(map(sum, matrix))
+print(results)
