@@ -48,3 +48,8 @@ for line in lines:
 
 results = list(map(sum, matrix))
 print(results)
+
+
+"""
+RUN: mapper.py < text.txt | reduce.py | matrixReduce.py
+"""
