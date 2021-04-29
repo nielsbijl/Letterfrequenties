@@ -8,7 +8,6 @@ lines = sys.stdin.readlines()
 lines.sort()
 
 for line in lines:
-    line = line.strip()
 
     chars, count = line.split('\t', 1)
     count = int(count)
