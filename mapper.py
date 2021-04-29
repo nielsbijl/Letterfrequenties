@@ -21,4 +21,6 @@ for index in range(len(string)):
 RUN: mapper.py < text.txt > mapoutput.txt
 
 run mapper.py with text.txt as stdin and write stdout to mapoutput.txt
+
+RUN ALL: mapper.py < text.txt | reduce.py
 """

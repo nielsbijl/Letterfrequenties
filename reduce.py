@@ -29,4 +29,6 @@ if current_chars == chars:
 RUN: reduce.py < mapoutput.txt
 
 run reduce.py with mapoutput.txt as stdin
+
+RUN ALL: mapper.py < text.txt | reduce.py
 """
