@@ -1,30 +1,15 @@
 import sys
-
+from itertools import groupby
 
 if __name__ == "__main__":
-    current_chars = None
-    current_count = 0
-    chars = None
+    sep = '\t'
+    data = [line.rstrip('\n').split(sep, 1) for line in sys.stdin]
 
-    lines = sys.stdin.readlines()
-    lines.sort()
-
-    for line in lines:
-        chars, count = line.split('\t', 1)
-        count = int(count)
-
-        if current_chars == chars:
-            current_count += count
-        else:
-            if current_chars:
-                print('%s\t%s' % (current_chars, current_count))
-            current_count = count
-            current_chars = chars
-
-    if current_chars == chars:
-        print('%s\t%s' % (current_chars, current_count))
-
+    for chars, group in groupby(data, lambda x: x[0]):
+        group = list(group)
+        print("{}{}{}".format(chars, sep, len(group)))
 
 """
-RUN: mapper.py < text.txt | reduce.py
+RUN: mapper.py < text.txt | sort | reduce.py
+
 """

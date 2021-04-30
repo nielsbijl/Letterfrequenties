@@ -51,5 +51,6 @@ print(results)
 
 
 """
-RUN: mapper.py < text.txt | reduce.py | matrixReduce.py
+RUN: mapper.py < text.txt | sort | reduce.py | matrixReduce.py
+
 """
