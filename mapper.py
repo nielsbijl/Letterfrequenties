@@ -1,19 +1,18 @@
 import sys
 
-string = sys.stdin.read()
 
-allowed_chars = 'abcdefghijklmnopqrstuvwxyz '
+if __name__ == "__main__":
+    text = sys.stdin.read()
 
-for index in range(len(string)):
-    if index < len(string) - 1:
-        char0 = string[index]
-        if char0 not in allowed_chars:
-            char0 = '_'
-        char1 = string[index + 1]
-        if char1 not in allowed_chars:
-            char1 = '_'
+    allowed_chars = 'abcdefghijklmnopqrstuvwxyz '
 
-        print('%s\t%s' % (char0 + char1, 1))
+    chars = list(map(lambda x: x if x in allowed_chars else '_', text))
+
+    for index in range(len(chars)):
+        if index < len(chars) - 1:
+            char0 = chars[index]
+            char1 = chars[index + 1]
+            print('%s\t%s' % (char0 + char1, 1))
 
 
 
