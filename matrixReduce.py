@@ -36,15 +36,15 @@ lines.sort()
 
 for line in lines:
     chars, count = line.split('\t', 1)
-    if chars[0] == '_':
+    if chars[0] == '*':
         char0index = -1
     else:
         char0index = allowed_chars.index(chars[0])
-    if chars[1] == '_':
+    if chars[1] == '*':
         char1index = -1
     else:
         char1index = allowed_chars.index(chars[1])
-    matrix[char0index][char1index] += 1
+    matrix[char0index][char1index] += int(count)
 
 results = list(map(sum, matrix))
 print(results)
