@@ -1,0 +1,8 @@
+Train EN:
+python mapper.py < entext.txt | sort | python reducer.py | python reduce_to_matrix.py | python reduce_to_model.py en
+
+Train NL:
+python mapper.py < nltext.txt | sort | python reducer.py | python reduce_to_matrix.py | python reduce_to_model.py nl
+
+Validate:
+python mapper.py < validation.txt | sort | python reducer.py | python reduce_to_matrix.py | python reduce_to_validation.py en_fit.npy nl_fit.npy
