@@ -7,7 +7,6 @@ if __name__ == "__main__":
     allowed_chars = 'abcdefghijklmnopqrstuvwxyz '
 
     chars = list(map(lambda x: x if x in allowed_chars else '*', text))
-
     for index in range(len(chars) - 1):
         char0 = chars[index]
         char1 = chars[index + 1]
