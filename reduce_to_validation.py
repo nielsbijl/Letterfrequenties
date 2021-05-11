@@ -1,8 +1,8 @@
 import sys
 import ast
-from itertools import groupby
 import numpy as np
 
+# We load the model matrices.
 classes = {'en': np.load(sys.argv[1]), 'nl': np.load(sys.argv[2])}
 classes_count = {'en': 0, 'nl': 0}
 
@@ -13,10 +13,10 @@ for line in sys.stdin:
     min_score = np.inf
     min_class = ''
     for i in classes.keys():
+        # We calculate the score by checking which matrix is closest to the one of the sentence given.
         score = np.sum(np.abs(classes[i] - matrix))
         if score < min_score:
             min_score = score
             min_class = i
     classes_count[min_class] += 1
-    # print(min_class)
 print(classes_count)
