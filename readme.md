@@ -1,5 +1,5 @@
 # Opdracht: Letterfrequenties
-Niels Bijl student nummer
+Niels Bijl 1754339 <br>
 Floris Videler 1758374
 
 ## How to run
