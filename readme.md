@@ -15,4 +15,4 @@ Voor het valideren:<br>
 ## Resultaten
 In het validatie bestand staan 191 regels waarvan 73 in het Nederlands en 118 in het engels. Met de train tests die ook op deze GitHub staan zaten wij er 4 of 5 naast. Best een goede score!
 <br><br>
-![resultaat](https://i.ibb.co/KXkDwzk/letterfrequenties-result.png)
+![resultaat](https://i.ibb.co/mGT42NG/letterfrequentie-result.png)
