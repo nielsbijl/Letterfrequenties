@@ -3,13 +3,13 @@ Niels Bijl 1754339 <br>
 Floris Videler 1758374
 
 ## How to run
-Voor het trainen op een Engelse text:
+Voor het trainen op een Engelse text:<br>
 `python train_mapper.py < entext.txt | sort | python train_reducer.py | python train_reduce_to_matrix.py en` 
 
-Voor het trainen op een Nederlandse text:
+Voor het trainen op een Nederlandse text:<br>
 `python train_mapper.py < nltext.txt | sort | python train_reducer.py | python train_reduce_to_matrix.py nl`
 
-Voor het valideren:
+Voor het valideren:<br>
 `python mapper.py < validation.txt | sort | python reducer.py | python reduce_to_matrix.py | python reduce_to_validation.py en_fit.npy nl_fit.npy`
 
 ## Resultaten
