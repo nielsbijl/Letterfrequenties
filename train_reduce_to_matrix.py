@@ -11,4 +11,4 @@ for line in sys.stdin:
 # We normalize the matrix per row.
 matrix = matrix / matrix.sum(axis=1)[:, None]
 print(matrix)
-np.save(f'{lang}_fit', matrix)
+np.save(f'exported_models/{lang}_fit', matrix)
